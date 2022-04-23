@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul,ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: $font-main;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--data-font-main);
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+button,a,img,select {
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+$font-heading : 'UTM-AVO';
+$font-main: 'SVN-Gilroy';
+$color : #2296F3;
+$background-color: #2296F3;
+$color-bold: #0482e6;
+$background-color-bold: #0482e6;
+$background-body : #F5F5F5;
+$white: #FFFFFF;
+$padding-default: 1rem;
+$black : #000000;
+$container : 117rem;
+$color-hover : #abffc9;
+$color-active : #73f378;
+$background-color-opacity : rgba(0,121,218,.701961);
+$background-color-opacity-light : rgba(63,81,181,.611765);
+
+:root{ 
+    --data-font-heading: #{$font-heading};
+    --data-font-main: #{$font-main};
+    --data-color : #{$color};
+    --data-background-color : #{$background-color};
+    --data-color-bold : #{$color-bold};
+    --data-background-color-bold : #{$background-color-bold};
+    --data-background-body : #{$background-body};
+    --data-white : #{$white};
+    --data-padding-default : #{$padding-default};
+    --data-black : #{$black};
+    --data-container : #{$container};
+    --data-color-hover : #{$color-hover};
+    --data-color-active : #{$color-active};
+    --data-background-color-opacity : #{$background-color-opacity};
+    --data-background-color-opacity-light : #{$background-color-opacity-light};
+  }
