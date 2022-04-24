@@ -9,27 +9,48 @@
     }
     &__content {
         width: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0.4rem;
+        margin-top: 1rem;
+        @include min-md {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0.4rem;
+            margin-top: 0;
+        }
         &--top {
-            @include flexJustifyAlign(flex-start,center);
+            @include flexJustifyAlign(flex-start, center);
             gap: 0.1rem;
             li {
-                @include flexJustifyAlign(flex-start,center);
+                @include max-md {
+                    width: calc(100% / 3);
+                    @include flexJustifyAlign(center, center);
+                }
+                @include min-md {
+                    @include flexJustifyAlign(flex-start, center);
+                }
                 gap: 1rem;
                 cursor: pointer;
-                padding: 1.5rem 4rem;
+                padding: 1rem;
+                @include min-md {
+                    padding: 1.5rem 4rem;
+                }
                 background-color: var(--data-background-body);
-                border-top:  0.4rem solid var(--data-background-body);
+                @include min-md {
+                    border-top: 0.4rem solid var(--data-background-body);
+                }
+                @include max-md {
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                }
                 i {
                     font-size: 2.4rem;
                 }
             }
             li.active {
-                border-top:  0.4rem solid var(--data-color-active);
+                border-top: 0.4rem solid var(--data-color-active);
                 background-color: var(--data-background-color-opacity);
+                @include max-md {
+                    box-shadow: unset;
+                }
                 i {
                     color: var(--data-color-active);
                 }
@@ -41,16 +62,37 @@
         &--main {
             form {
                 padding: 4rem;
-                @include flexJustifyAlign(space-between,center);
-                gap: 3rem;
+                @include min-md {
+                    gap: 3rem;
+                }
+                @include max-md {
+                    padding: 2rem 0.5rem;
+                }
+                @include flexJustifyAlign(space-between, center);
+                @include max-md {
+                    flex-wrap: wrap;
+                }
                 & > div {
-                   &:first-child {
-                       width: 34%;
-                   } 
-                   width: 22%;
+                    @include min-md {
+                        &:first-child {
+                            width: 34%;
+                        }
+                        width: 22%;
+                    }
+                    @include max-md {
+                        width: 50%;
+                        margin-bottom: 1rem;
+                        &:nth-child(n) {
+                            padding-right: 1rem;
+                        }
+                        &:nth-child(2n) {
+                            padding-left: 1rem;
+                        }
+                    }
                 }
             }
-            input,select {
+            input,
+            select {
                 color: var(--data-white);
                 width: 100%;
                 background-color: var(--data-background-color-opacity-light);

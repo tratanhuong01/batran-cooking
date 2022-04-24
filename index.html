@@ -29,7 +29,7 @@
     <!-- header -->
     <header id="header" class="header">
         <div class="container">
-            <div class="header__top">
+            <div class="header__top wrapper">
                 <p>HueDailyTour.Net | Thiên đường tour ghép hàng ngày tại Huế</p>
                 <ul>
                     <li>
@@ -59,11 +59,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="header__main">
+            <div class="header__main wrapper">
                 <div class="header__logo">
                     <img src="./images/logo.png" alt="" srcset="">
                 </div>
                 <div class="header__menu">
+                    <div class="header__menu--close">
+                        <span class="bx bx-x"></span>
+                    </div>
                     <ul class="header__menu--main menu-main">
                         <li class="menu-item header__menu--item active">
                             <a href="">
@@ -165,9 +168,19 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="header__menu--input">
+                        <div>
+                            <input type="text" placeholder="Tìm kiếm">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <i class="bx bx-list-ul"></i>
                 </div>
             </div>
         </div>
+        <div class="header__menu--overlay"></div>
     </header>
     <!-- header -->
 

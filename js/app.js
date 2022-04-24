@@ -27,5 +27,27 @@ $(document).ready(function () {
     });
     //banner code 
 
+    //menu code 
+    const clickOutSideMenu = () => {
+        $('.header__menu').removeClass('active');
+        $('.header__menu--overlay').hide();
+        $('.header__menu--overlay').off('click', clickOutSideMenu);
+    }
+    $('.header__mobile').on('click', function () {
+        $('.header__menu--overlay').show();
+        $('.header__menu').addClass('active');
+        $('.header__menu--overlay').on('click', clickOutSideMenu);
+    });
+    $('.header__menu--close').on('click', clickOutSideMenu);
+    $(window).on('resize', () => {
+        if ($(window).innerWidth() > 768) {
+            clickOutSideMenu();
+            $('.header__menu').removeClass('transition-1/2s');
+        }
+        else {
+            $('.header__menu').addClass('transition-1/2s');
+        }
+    })
+    //menu code
 });
 //

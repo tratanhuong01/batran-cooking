@@ -3,4 +3,12 @@
     max-width: var(--data-container);
     margin: auto;
 }
+.wrapper {
+    @include max-ss(1170px) {
+        padding: 0rem 2rem;
+    }
+}
+.transition-1\/2s {
+    transition: all 0.3s;
+}
 // global class
