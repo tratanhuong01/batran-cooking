@@ -9,7 +9,8 @@
     outline: none;
 }
 
-ul,ol {
+ul,
+ol {
     list-style-type: none;
 }
 
@@ -18,7 +19,6 @@ a {
     color: $black;
 }
 
-
 html {
     font-size: 62.5%;
     font-family: $font-main;
@@ -26,7 +26,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: var(--data-font-main);
+    background-color: var(--data-background-body);
 }
 
 img {
@@ -34,6 +34,9 @@ img {
     object-fit: cover;
 }
 
-button,a,img,select {
+button,
+a,
+img,
+select {
     cursor: pointer;
 }

@@ -7,9 +7,34 @@ $(document).ready(function () {
         autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        nextArrow: false,
-        prevArrow: false,
+        nextArrow: $('.banner__button--right'),
+        prevArrow: $('.banner__button--left'),
     });
+
+    $('.top_tour__content--wrapper').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        nextArrow: $('.top_tour__content--button--right'),
+        prevArrow: $('.top_tour__content--button--left'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+
     const listCategoryBanner = [$('.search-tour-content'), $('.search-hotel-content'),
     $('.search-travel-car-content')];
     const resetActiveListCategoryBanner = () => {

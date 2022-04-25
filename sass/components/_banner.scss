@@ -1,5 +1,41 @@
 .banner {
     position: relative;
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 101;
+        color: var(--data-white);
+        font-size: 3.2rem;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+            opacity: 1;
+        }
+        &--left {
+            left: 1rem;
+            @include min-lg {
+                left: 5rem;
+            }
+        }
+        &--right {
+            right: 1rem;
+            @include min-lg {
+                right: 5rem;
+            }
+        }
+    }
+    &__ {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__container-- {
+        position: relative;
+    }
     &__container {
         overflow: hidden;
         display: block;

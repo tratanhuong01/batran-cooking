@@ -66,6 +66,9 @@
         }
     }
     &__menu {
+        @include min-lg {
+            flex: 1;
+        }
         @include max-md {
             position: fixed;
             top: 0;
