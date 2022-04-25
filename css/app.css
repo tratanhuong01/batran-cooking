@@ -1216,6 +1216,19 @@ select {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.tour__item--star {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #ff9801;
+  padding: 0.3rem;
+  font-size: 1.8rem;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+}
+
 .tour__item--hot {
   width: 5rem;
   height: 5rem;
@@ -1265,18 +1278,23 @@ select {
 }
 
 .tour__item--footer li {
+  font-size: 1.5rem;
   width: 50%;
   padding: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   border: 0.1rem solid rgba(128, 128, 128, 0.092);
 }
 
 .tour__item--footer li span:nth-child(1) {
   font-size: 1.8rem;
   margin-right: 1rem;
+  color: var(--data-color);
+}
+
+.tour__item--footer li:nth-child(2) a.more {
+  cursor: pointer;
   color: var(--data-color);
 }
 
