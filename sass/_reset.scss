@@ -25,6 +25,7 @@ html {
 }
 
 body {
+    scroll-behavior: smooth;
     font-size: 1.6rem;
     background-color: var(--data-background-body);
 }

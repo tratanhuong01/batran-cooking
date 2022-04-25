@@ -1,0 +1,17 @@
+.breadcrumb {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    ul {
+        @include flexJustifyAlign(flex-start, center);
+        gap: 0.3rem;
+        li {
+            a {
+                @include flexJustifyAlign(flex-start, center);
+                gap: 0.3rem;
+            }
+            a.color {
+                color: var(--data-color);
+            }
+        }
+    }
+}

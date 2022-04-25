@@ -73,6 +73,7 @@
             position: fixed;
             top: 0;
             right: 0;
+            overflow: auto;
             height: 100vh;
             transform: translateX(100%);
             opacity: 0;
@@ -115,12 +116,30 @@
             @include max-md {
                 cursor: pointer;
                 a {
+                    @include flexJustifyAlign(space-between, center);
                     color: var(--data-white);
+                    padding: 1.5rem 1rem;
+                    border-bottom: 0.1rem solid var(--data-background-color-opacity);
+                    &:hover {
+                        background-color: var(--data-blue);
+                    }
+                    span {
+                        &:nth-child(2) {
+                            transition: all 0.5s;
+                        }
+                        &:nth-child(2).active {
+                            transform: rotate(90deg);
+                        }
+                    }
                 }
-                padding: 1.5rem 1rem;
-                border-bottom: 0.1rem solid var(--data-background-color-opacity);
-                &:hover {
-                    background-color: var(--data-blue);
+            }
+            @include min-md {
+                & > a {
+                    & > span {
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                    }
                 }
             }
             @include min-md {

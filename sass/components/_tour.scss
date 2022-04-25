@@ -102,6 +102,7 @@
             }
         }
         &--list {
+            background-color: var(--data-white);
             &--top {
                 @include flexJustifyAlign(flex-start, center);
                 height: 4rem;
@@ -260,6 +261,7 @@
             }
         }
     }
+    //
     &__containner--first {
         gap: 3rem;
         display: grid;
@@ -285,4 +287,24 @@
             grid-template-columns: 1fr;
         }
     }
+    &__containner--third {
+        &__ {
+            background-color: var(--data-background-body);
+            padding: 6rem 0rem;
+        }
+        gap: 3rem;
+        display: grid;
+        margin-bottom: 3rem;
+        grid-template-columns: 1fr;
+        @include min-sm {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include min-md {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include min-lg {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+    //
 }
