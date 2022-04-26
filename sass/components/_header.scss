@@ -160,6 +160,22 @@
                 }
                 display: none;
                 &--item {
+                    position: relative;
+                    @include max-md {
+                        &:hover &::before {
+                            color: var(--data-color-hover);
+                        }
+                    }
+                    &:first-child::before {
+                        top: 45%;
+                    }
+                    &::before {
+                        content: ">>";
+                        position: absolute;
+                        top: 35%;
+                        transform: translateX(-50%);
+                        left: 2rem;
+                    }
                     &:first-child {
                         padding-top: 1.6rem;
                     }
@@ -168,11 +184,8 @@
                     }
                     padding: 0.8rem;
                     a {
-                        @include flexJustifyAlign(flex-start, center);
-                        gap: 1rem;
-                        span {
-                            white-space: nowrap;
-                        }
+                        padding-left: 3rem;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -200,6 +213,18 @@
             }
             @include max-md {
                 background-color: var(--data-blue);
+            }
+        }
+        @include max-md {
+            &--item.has-children > a::before {
+                content: ">";
+                position: absolute;
+                top: 1.5rem;
+                right: 1rem;
+                transition: all 0.5s;
+            }
+            &--item.has-children-active > a::before {
+                transform: rotate(90deg);
             }
         }
         &--overlay {

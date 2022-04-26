@@ -70,22 +70,14 @@ $(document).ready(function () {
         const functionPreventDefault = (e, index, el) => {
             e.preventDefault();
             if (el.parentElement) {
-                if (el.parentElement.children.length > 1) {
+                if (el.parentElement.classList.contains('has-children')) {
                     if (el.parentElement.children[1].style.display === 'none') {
+                        el.parentElement.classList.add('has-children-active');
                         el.parentElement.children[1].style.display = 'block';
-                        if (el) {
-                            if (el.children[1]) {
-                                el.children[1].classList.add('active');
-                            }
-                        }
                     }
                     else {
+                        el.parentElement.classList.remove('has-children-active');
                         el.parentElement.children[1].style.display = 'none';
-                        if (el) {
-                            if (el.children[1]) {
-                                el.children[1].classList.remove('active');
-                            }
-                        }
                     }
                 }
             }
@@ -106,7 +98,7 @@ $(document).ready(function () {
                 el.style.display = 'none';
             });
             [...listItemMenu].forEach((el, index) => {
-                if (el.children.length > 1) {
+                if (el.parentElement.classList.contains('has-children')) {
                     el.addEventListener('click', (event) => { functionPreventDefault(event, index, el) })
                 }
             })
@@ -149,6 +141,41 @@ $(document).ready(function () {
         $(window).scrollTop(0)
     })
     // scroll back to top
+
+    // detail travel tour
+    $('.detail_tour__content--left--container').slick({
+        infinite: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        prevArrow: $('.detail_tour__content--left--button--left'),
+        nextArrow: $('.detail_tour__content--left--button--right'),
+    });
+    $('.detail_tour__content--left--container--nav').slick({
+        slidesToScroll: 3,
+        slidesToShow: 6,
+        asNavFor: '.detail_tour__content--left--container',
+        focusOnSelect: true
+    });
+
+    const detailDescriptionTop = document.querySelector('.detail__description--top');
+    if (detailDescriptionTop) {
+        const listDescriptionDetailTourTravel = [$('.detail__description-more'), $('.detail__description--calendar'),
+        $('.detail__description--contact')];
+        [...detailDescriptionTop.children].forEach((el, index) => {
+            el.addEventListener('click', () => {
+                listDescriptionDetailTourTravel.forEach(el => {
+                    el.hide();
+                });
+                [...detailDescriptionTop.children].forEach((el_, index_) => {
+                    el_.classList.remove('active');
+                })
+                el.classList.add('active');
+                listDescriptionDetailTourTravel[index].show();
+            });
+        })
+    }
+
+    // detail travel tour
 
 });
 //

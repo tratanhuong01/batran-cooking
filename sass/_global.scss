@@ -46,6 +46,7 @@
     height: 3.2rem;
     background-color: var(--data-background-color);
     color: var(--data-white);
+    z-index: 999;
     font-size: 2.4rem;
     &.active {
         display: flex !important;

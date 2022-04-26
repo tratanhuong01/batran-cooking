@@ -1,4 +1,4 @@
-$font-heading: "UTM-AVO";
+$font-heading: "UTM Avo";
 $font-main: "SVN-Gilroy";
 $color: #2296f3;
 $background-color: #2296f3;
@@ -14,6 +14,7 @@ $color-active: #73f378;
 $background-color-opacity: rgba(0, 121, 218, 0.701961);
 $background-color-opacity-light: rgba(63, 81, 181, 0.611765);
 $blue: #223ad8;
+$yellow: #ffc720;
 
 :root {
   --data-font-heading: #{$font-heading};
@@ -32,4 +33,5 @@ $blue: #223ad8;
   --data-background-color-opacity: #{$background-color-opacity};
   --data-background-color-opacity-light: #{$background-color-opacity-light};
   --data-blue: #{$blue};
+  --data-yellow: #{$yellow};
 }
