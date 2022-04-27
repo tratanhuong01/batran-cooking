@@ -57,6 +57,9 @@
             @include flexJustifyAlign(flex-start, center);
             gap: 0.1rem;
             li {
+                @include max-sm {
+                    font-size: 1.1rem;
+                }
                 @include max-md {
                     width: calc(100% / 3);
                     @include flexJustifyAlign(center, center);

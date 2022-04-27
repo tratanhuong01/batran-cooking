@@ -1,19 +1,27 @@
 .tour {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     @include min-lg {
         display: flex;
         gap: 5rem;
     }
-    &__left {
+    &__left-- {
         @include min-lg {
             width: 75%;
+        }
+    }
+    &__left {
+        background-color: var(--data-white);
+        @include min-lg {
+            width: 75%;
+            padding: 1.2rem;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         }
         &--top {
             @include min-lg {
                 @include flexJustifyAlign(space-between, center);
             }
-            padding: 1rem 0rem;
+            padding: 1rem;
             position: relative;
             border-bottom: 0.1rem solid var(--data-black);
             margin-bottom: 2rem;
@@ -291,7 +299,7 @@
     &__containner--third {
         &__ {
             background-color: var(--data-background-body);
-            padding: 6rem 0rem;
+            padding: 3rem 0rem;
         }
         gap: 3rem;
         display: grid;

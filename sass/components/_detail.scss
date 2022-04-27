@@ -155,14 +155,15 @@
         margin-top: -12rem;
     }
     &__description {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         &--top {
             @include flexJustifyAlign(flex-start, center);
+            flex-wrap: wrap;
             gap: 1rem;
             cursor: pointer;
             font-weight: 600;
             font-size: 1.5rem;
             li {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 padding: 2rem 3.2rem;
                 background-color: var(--data-white);
             }

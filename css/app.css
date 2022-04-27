@@ -163,6 +163,12 @@ select {
   background-color: var(--data-white);
 }
 
+.title-bottom h3 {
+  font-size: 2.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid var(--data-black);
+}
+
 .header {
   position: relative;
   z-index: 100;
@@ -284,7 +290,7 @@ select {
     height: 100vh;
     transform: translateX(100%);
     opacity: 0;
-    width: 40rem;
+    width: 30rem;
   }
 }
 
@@ -760,6 +766,12 @@ select {
   background-color: var(--data-background-body);
 }
 
+@media all and (max-width: 640px) {
+  .banner__content--top li {
+    font-size: 1.1rem;
+  }
+}
+
 @media all and (max-width: 768px) {
   .banner__content--top li {
     width: calc(100% / 3);
@@ -1063,8 +1075,8 @@ select {
 }
 
 .tour {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media all and (min-width: 1024px) {
@@ -1075,13 +1087,25 @@ select {
 }
 
 @media all and (min-width: 1024px) {
-  .tour__left {
+  .tour__left-- {
     width: 75%;
   }
 }
 
+.tour__left {
+  background-color: var(--data-white);
+}
+
+@media all and (min-width: 1024px) {
+  .tour__left {
+    width: 75%;
+    padding: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
+}
+
 .tour__left--top {
-  padding: 1rem 0rem;
+  padding: 1rem;
   position: relative;
   border-bottom: 0.1rem solid var(--data-black);
   margin-bottom: 2rem;
@@ -1435,7 +1459,7 @@ select {
 
 .tour__containner--third__ {
   background-color: var(--data-background-body);
-  padding: 6rem 0rem;
+  padding: 3rem 0rem;
 }
 
 @media all and (min-width: 640px) {
@@ -1515,7 +1539,7 @@ select {
 
 .about__tab--item--content {
   width: 75%;
-  padding-left: 1rem;
+  padding: 0rem 1rem;
 }
 
 .about__tab--item--content p:nth-child(1) a {
@@ -1874,14 +1898,11 @@ select {
   margin-top: -12rem;
 }
 
-.detail__description {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
 .detail__description--top {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 1rem;
   cursor: pointer;
   font-weight: 600;
@@ -1889,6 +1910,7 @@ select {
 }
 
 .detail__description--top li {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2rem 3.2rem;
   background-color: var(--data-white);
 }
@@ -1934,5 +1956,230 @@ select {
 
 .detail__description--contact ul li:nth-child(4) span:nth-child(1) {
   color: #ffc107;
+}
+
+.socical {
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  z-index: 111;
+}
+
+.socical__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+  background-color: white;
+  cursor: pointer;
+}
+
+.socical__plus i {
+  font-size: 3.2rem;
+  transition: all 0.5s;
+}
+
+.socical__plus.active i {
+  transform: rotate(135deg);
+}
+
+.socical__item {
+  display: none;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.socical__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100rem;
+}
+
+.travel_guide__item {
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+  background-color: var(--data-white);
+}
+
+@media all and (min-width: 768px) {
+  .travel_guide__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .travel_guide__item--image {
+    width: 30%;
+  }
+}
+
+.travel_guide__item--image > div {
+  padding-top: 70%;
+}
+
+.travel_guide__item--content {
+  padding-top: 2rem;
+  flex: 1;
+}
+
+@media all and (min-width: 768px) {
+  .travel_guide__item--content {
+    padding-top: 0rem;
+    padding-left: 2rem;
+  }
+}
+
+.travel_guide__item--content h3 a:hover {
+  color: var(--data-color);
+}
+
+.travel_guide__item--content div {
+  margin: 1rem 0rem;
+  color: #888;
+  display: flex;
+  font-size: 1.5rem;
+  gap: 3rem;
+}
+
+.travel_guide__item--content p {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.travel_guide__item--content > a {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 100rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--data-white);
+  background-color: var(--data-background-color);
+}
+
+.travel_guide__wrapper {
+  margin-top: 3rem;
+}
+
+.travel_guide__child {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.travel_guide__child--image {
+  padding-top: 70%;
+  display: block;
+}
+
+.travel_guide__child--text {
+  margin: 1rem 0rem;
+}
+
+.travel_guide__child--text a {
+  font-weight: 600;
+  color: var(--data-color);
+}
+
+.travel_guide__child span {
+  display: block;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.travel_guide__container-- {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 1.2rem;
+  background-color: var(--data-white);
+}
+
+@media all and (min-width: 640px) {
+  .travel_guide__container-- {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .travel_guide__container-- {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.info-about {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  position: relative;
+  border-bottom: 0.1rem solid rgba(136, 136, 136, 0.313);
+}
+
+.info-about__image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+}
+
+.info-about__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  object-fit: cover;
+}
+
+.info-about__content {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.info-about__content h4 {
+  margin-bottom: 1rem;
+}
+
+.info-about__content div {
+  color: #555;
+  font-size: 1.3rem;
+}
+
+.info-about__content div a {
+  color: #555;
+}
+
+.info-about__content div a:hover {
+  color: var(--data-color);
+}
+
+.info-about__socical {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.info-about__socical--item {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border: none;
+  background-color: #1877f2;
+  color: var(--data-white);
 }
 /*# sourceMappingURL=app.css.map */

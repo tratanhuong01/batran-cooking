@@ -1,0 +1,143 @@
+.travel_guide {
+    &__item {
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+        background-color: var(--data-white);
+        @include min-md {
+            @include flexJustifyAlign(flex-start, center);
+        }
+        &--image {
+            @include min-md {
+                width: 30%;
+            }
+            & > div {
+                padding-top: 70%;
+            }
+        }
+        &--content {
+            padding-top: 2rem;
+            @include min-md {
+                padding-top: 0rem;
+                padding-left: 2rem;
+            }
+            flex: 1;
+            h3 a {
+                &:hover {
+                    color: var(--data-color);
+                }
+            }
+            div {
+                margin: 1rem 0rem;
+                color: #888;
+                display: flex;
+                font-size: 1.5rem;
+                gap: 3rem;
+            }
+            p {
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+            }
+            & > a {
+                display: inline-block;
+                padding: 0.8rem 2rem;
+                border-radius: 100rem;
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                color: var(--data-white);
+                background-color: var(--data-background-color);
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 3rem;
+    }
+    &__child {
+        width: 100%;
+        margin-bottom: 2rem;
+        &--image {
+            padding-top: 70%;
+            display: block;
+        }
+        &--text {
+            margin: 1rem 0rem;
+            a {
+                font-weight: 600;
+                color: var(--data-color);
+            }
+        }
+        span {
+            display: block;
+            font-size: 1.4rem;
+            color: #555;
+        }
+    }
+    &__container-- {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include min-sm {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include min-lg {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        gap: 3rem;
+        padding: 1.2rem;
+        background-color: var(--data-white);
+    }
+}
+
+.info-about {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    @include flexJustifyAlign(flex-start, center);
+    gap: 2rem;
+    position: relative;
+    border-bottom: 0.1rem solid rgba(136, 136, 136, 0.313);
+    &__image {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        flex: 1;
+        padding-right: 1rem;
+        h4 {
+            margin-bottom: 1rem;
+        }
+        div {
+            color: #555;
+            font-size: 1.3rem;
+            a {
+                color: #555;
+                &:hover {
+                    color: var(--data-color);
+                }
+            }
+        }
+    }
+    &__socical {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        @include flexJustifyAlign(flex-end, center);
+        gap: 1rem;
+        &--item {
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.8rem;
+            font-size: 1.2rem;
+            @include flexJustifyAlign(center, center);
+            gap: 0.3rem;
+            border: none;
+            background-color: #1877f2;
+            color: var(--data-white);
+        }
+    }
+}

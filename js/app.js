@@ -174,7 +174,14 @@ $(document).ready(function () {
             });
         })
     }
-
+    $('.socical__plus').on('click', () => {
+        if ($('.socical__plus').hasClass('active')) {
+            $('.socical__plus').removeClass('active')
+        }
+        else {
+            $('.socical__plus').addClass('active');
+        }
+    });
     // detail travel tour
 
 });
