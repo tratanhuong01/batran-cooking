@@ -176,10 +176,14 @@ $(document).ready(function () {
     }
     $('.socical__plus').on('click', () => {
         if ($('.socical__plus').hasClass('active')) {
-            $('.socical__plus').removeClass('active')
+            $('.socical__plus').removeClass('active');
+            $('.socical__container').removeClass('active');
+            $('.socical__container .socical__item').removeClass('active');
         }
         else {
             $('.socical__plus').addClass('active');
+            $('.socical__container').addClass('active');
+            $('.socical__container .socical__item').addClass('active');
         }
     });
     // detail travel tour

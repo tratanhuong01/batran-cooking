@@ -1,7 +1,7 @@
 .socical {
     position: fixed;
-    bottom: 3rem;
-    left: 3rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
     z-index: 111;
     &__plus {
         @include flexJustifyAlign(center, center);
@@ -16,15 +16,45 @@
             transform: rotate(135deg);
         }
     }
+    &__container {
+        visibility: hidden;
+        &.active {
+            visibility: visible;
+        }
+    }
+    .socical__container .socical__item {
+        position: absolute;
+        top: 0;
+        transition: all 0.3s;
+        &.active:nth-child(1) {
+            top: -6rem;
+        }
+        &.active:nth-child(2) {
+            top: -12rem;
+        }
+        &.active:nth-child(3) {
+            top: -18rem;
+        }
+        &.active:nth-child(4) {
+            top: -24rem;
+        }
+        &.active:nth-child(5) {
+            top: -30rem;
+        }
+        &.active:nth-child(6) {
+            top: -36rem;
+        }
+    }
     &__item {
-        display: none;
         cursor: pointer;
         width: 5rem;
+        background-color: var(--data-white);
         height: 5rem;
         border-radius: 100rem;
         margin-top: 1rem;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         img {
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
             width: 100%;
             height: 100%;
             object-fit: cover;
